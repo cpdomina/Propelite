@@ -7,8 +7,8 @@ Simple access to property files in Java.
 
 With this property file:
 
-	name=Propelite
-	version=1.0
+	name = Propelite
+	version = 1.0
 	
 And this Java Interface:
 
@@ -28,10 +28,10 @@ Need more control on what's been mapped to what? Check out this example!
 
 Property file:
 
-	app.propelite.name=Propelite
-	app.propelite.internal=true
+	app.propelite.name = Propelite
+	app.propelite.internal = true
 	
-Java Interface:
+Java Interfaces:
 
 	@PropertyPath(path="app")
 	interface App {
@@ -46,13 +46,13 @@ Java Interface:
 	interface PropeliteApp extends App{
 	
 		@Property(name="internal", defaultValue="false")
-		public boolean someInternalValue;
+		public boolean someInternalValue();
 	}
 	
 Access:
 
 	PropeliteApp propelite = Propelite.create(PropeliteApp.class, properties);
-	System.out.println(propelite.name() +" "+ propelite.version() +" "+ propelite.someInternalValue);		//Propelite 1.0 true
+	System.out.println(propelite.name() +" "+ propelite.version() +" "+ propelite.someInternalValue());		//Propelite 1.0 true
 	
 ### More examples
 
