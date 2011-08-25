@@ -6,16 +6,19 @@ Simple access to property files in Java
 ### Example
 
 With this property file:
+
 	name=Propelite
 	version=1.0
 	
 And this Java Interface:
+
 	interface App {
 		public String name();
 		public double version();
 	}
 	
 We can easily access the values in the property file:
+
 	App propelite = Propelite.create(App.class, properties);
 	System.out.println(propelite.name() +" "+ propelite.version());		//Propelite 1.0
 	
@@ -24,10 +27,12 @@ We can easily access the values in the property file:
 Need more control on what's been mapped to what? Check out this example!
 
 Property file:
+
 	app.propelite.name=Propelite
 	app.propelite.internal=true
 	
 Java Interface:
+
 	@PropertyPath(path="app")
 	interface App {
 		public String name();
@@ -44,6 +49,7 @@ Java Interface:
 	}
 	
 Access:
+
 	PropeliteApp propelite = Propelite.create(PropeliteApp.class, properties);
 	System.out.println(propelite.name() +" "+ propelite.version() +" "+propelite.someInternalValue);		//Propelite 1.0 true
 	
