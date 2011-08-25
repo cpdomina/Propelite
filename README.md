@@ -1,7 +1,7 @@
 Propelite
 =========
 
-Simple access to property files in Java
+Simple access to property files in Java.
 
 ### Example
 
@@ -35,6 +35,7 @@ Java Interface:
 
 	@PropertyPath(path="app")
 	interface App {
+	
 		public String name();
 		
 		@Property(defaultValue="1.0")
@@ -51,7 +52,7 @@ Java Interface:
 Access:
 
 	PropeliteApp propelite = Propelite.create(PropeliteApp.class, properties);
-	System.out.println(propelite.name() +" "+ propelite.version() +" "+propelite.someInternalValue);		//Propelite 1.0 true
+	System.out.println(propelite.name() +" "+ propelite.version() +" "+ propelite.someInternalValue);		//Propelite 1.0 true
 	
 ### More examples
 
