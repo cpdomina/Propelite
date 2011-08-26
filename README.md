@@ -56,4 +56,4 @@ Access:
 	
 ### More examples
 
-Check out the test suite in the source code to check out more examples.
+Check out the test suite in the source code for more examples.

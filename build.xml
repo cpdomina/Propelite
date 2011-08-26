@@ -49,6 +49,7 @@
     	
     	<copy file="LICENSE" todir="${dist}"/>
     	<copy file="README.md" todir="${dist}"/>
+    	<copy file="build.xml" todir="${dist}"/>
 
     </target>
 
